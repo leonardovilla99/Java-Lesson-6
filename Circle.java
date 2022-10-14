@@ -1,4 +1,4 @@
-public class Circle extends Shape{
+public class Circle extends Shape implements ShapePerimeter{
     private double radius;
 
     public Circle(double r){
@@ -9,5 +9,9 @@ public class Circle extends Shape{
     @Override
     public double getArea(){
         return Math.PI * Math.pow(radius, 2);
+    }
+    @Override
+    public double getPerimeter(){
+        return 2*Math.PI*radius;
     }
 }
